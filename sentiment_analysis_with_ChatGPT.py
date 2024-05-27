@@ -181,6 +181,13 @@ plt.ylabel('Numero di Tweet')
 plt.title('Distribuzione dei Tweet dopo Sentiment Prediction con ChatGPT')
 plt.show()
 
+print() 
+# let's print the percentage of each target variable values after cleaning
+print('Positivi', round(sentiment_results_GPT['sentiment'].value_counts()['positive']/len(sentiment_results_GPT) * 100),'% -->', sentiment_results_GPT['sentiment'].value_counts()['positive'])
+print('Neutrali', round(sentiment_results_GPT['sentiment'].value_counts()['neutral']/len(sentiment_results_GPT) * 100),'% -->', sentiment_results_GPT['sentiment'].value_counts()['neutral'])
+print('Negativi', round(sentiment_results_GPT['sentiment'].value_counts()['negative']/len(sentiment_results_GPT) * 100),'% -->', sentiment_results_GPT['sentiment'].value_counts()['negative'])
+print() 
+
 # PLOT THE WORDCLOUD
     # wordcloud positivo
         # Most Common Words in Positive Tweets
